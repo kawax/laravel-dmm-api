@@ -18,7 +18,7 @@ class DmmClient implements DmmClientInterface
     /**
      * constructor.
      *
-     * @param Dmm $dmm
+     * @param \Dmm\Dmm $dmm
      */
     public function __construct(Dmm $dmm)
     {
@@ -38,7 +38,7 @@ class DmmClient implements DmmClientInterface
     }
 
     /**
-     * @return Dmm
+     * @return \Dmm\Dmm
      */
     public function dmm()
     {

@@ -14,7 +14,7 @@ interface DmmClientInterface
     public function create(array $config);
 
     /**
-     * @return Dmm
+     * @return \Dmm\Dmm
      */
     public function dmm();
 }
