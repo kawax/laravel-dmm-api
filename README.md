@@ -50,7 +50,7 @@ dd($result);
 ### AppServiceProvider などで登録
 
 ```php
-    public function register()
+    public function boot()
     {
         \Dmm::macro('search', function ($keyword) {
             $response = $this->dmm()->api('product')->find(Dmm\Apis\Product::SITE_GENERAL, [
