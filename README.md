@@ -67,6 +67,11 @@ dd($result);
 $response = \Dmm::search('test');
 ```
 
+## Demo
+https://dmm.kawax.biz/
+
+https://github.com/kawax/laravel-dmm-project
+
 ## LICENSE
 MIT  
 Copyright kawax
