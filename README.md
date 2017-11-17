@@ -53,7 +53,7 @@ dd($result);
     public function boot()
     {
         \Dmm::macro('search', function ($keyword) {
-            $response = $this->dmm()->api('product')->find(Dmm\Apis\Product::SITE_GENERAL, [
+            $response = $this->dmm()->api('product')->findGeneral[
                 'keyword' => $keyword,
             ]);
             
