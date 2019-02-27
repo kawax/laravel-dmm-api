@@ -4,7 +4,7 @@ namespace Revolution\Dmm\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-use Revolution\Dmm\DmmClient;
+use Revolution\Dmm\Contracts\Factory;
 
 class Dmm extends Facade
 {
@@ -15,6 +15,6 @@ class Dmm extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return DmmClient::class;
+        return Factory::class;
     }
 }

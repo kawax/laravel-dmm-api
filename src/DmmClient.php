@@ -6,7 +6,9 @@ use Dmm\Dmm;
 
 use Illuminate\Support\Traits\Macroable;
 
-class DmmClient implements DmmClientInterface
+use Revolution\Dmm\Contracts\Factory;
+
+class DmmClient implements Factory
 {
     use Macroable;
 
@@ -29,6 +31,7 @@ class DmmClient implements DmmClientInterface
      * @param array $config
      *
      * @return $this
+     * @throws \Dmm\Exceptions\DmmSDKException
      */
     public function create(array $config)
     {

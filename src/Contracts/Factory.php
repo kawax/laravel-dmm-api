@@ -1,15 +1,14 @@
 <?php
 
-namespace Revolution\Dmm;
+namespace Revolution\Dmm\Contracts;
 
-use Dmm\Dmm;
-
-interface DmmClientInterface
+interface Factory
 {
     /**
      * @param array $config
      *
      * @return $this
+     * @throws \Dmm\Exceptions\DmmSDKException
      */
     public function create(array $config);
 

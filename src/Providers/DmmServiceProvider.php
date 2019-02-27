@@ -3,19 +3,14 @@
 namespace Revolution\Dmm\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Contracts\Support\DeferrableProvider;
 
 use Dmm\Dmm;
 use Revolution\Dmm\DmmClient;
+use Revolution\Dmm\Contracts\Factory;
 
-class DmmServiceProvider extends ServiceProvider
+class DmmServiceProvider extends ServiceProvider implements DeferrableProvider
 {
-    /**
-     * Indicates if loading of the provider is deferred.
-     *
-     * @var bool
-     */
-    protected $defer = true;
-
     /**
      * Boot the service provider.
      */
@@ -31,7 +26,7 @@ class DmmServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton(DmmClient::class, function ($app) {
+        $this->app->singleton(Factory::class, function ($app) {
             return new DmmClient(new Dmm($app['config']->get('services.dmm')));
         });
     }
@@ -43,6 +38,6 @@ class DmmServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return [DmmClient::class];
+        return [Factory::class];
     }
 }
