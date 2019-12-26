@@ -18,7 +18,7 @@
         <whitelist>
             <directory suffix=".php">src/</directory>
             <exclude>
-                <file>src/DmmClientInterface.php</file>
+                <directory suffix=".php">src/Contracts/</directory>
                 <directory suffix=".php">src/Providers/</directory>
                 <directory suffix=".php">src/Facades/</directory>
             </exclude>
