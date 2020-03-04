@@ -14,14 +14,18 @@ class DmmTest extends TestCase
      */
     protected $client;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
-        $this->client = new DmmClient(new Dmm([
-            'api_id'       => 'test',
-            'affiliate_id' => 'test',
-        ]));
+        $this->client = new DmmClient(
+            new Dmm(
+                [
+                    'api_id'       => 'test',
+                    'affiliate_id' => 'test',
+                ]
+            )
+        );
     }
 
     public function testInstance()
@@ -31,10 +35,12 @@ class DmmTest extends TestCase
 
     public function testCreate()
     {
-        $client = $this->client->create([
-            'api_id'       => 'test',
-            'affiliate_id' => 'test',
-        ]);
+        $client = $this->client->create(
+            [
+                'api_id'       => 'test',
+                'affiliate_id' => 'test',
+            ]
+        );
 
         $this->assertInstanceOf('Revolution\Dmm\DmmClient', $client);
     }
@@ -46,9 +52,12 @@ class DmmTest extends TestCase
 
     public function testMacro()
     {
-        DmmClient::macro('test', function () {
-            return 'test';
-        });
+        DmmClient::macro(
+            'test',
+            function () {
+                return 'test';
+            }
+        );
 
         $this->assertTrue(DmmClient::hasMacro('test'));
         $this->assertTrue(is_callable(DmmClient::class, 'test'));
