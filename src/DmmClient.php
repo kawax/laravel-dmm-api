@@ -3,9 +3,7 @@
 namespace Revolution\Dmm;
 
 use Dmm\Dmm;
-
 use Illuminate\Support\Traits\Macroable;
-
 use Revolution\Dmm\Contracts\Factory;
 
 class DmmClient implements Factory
