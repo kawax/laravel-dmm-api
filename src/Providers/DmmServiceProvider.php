@@ -2,12 +2,11 @@
 
 namespace Revolution\Dmm\Providers;
 
-use Illuminate\Support\ServiceProvider;
-use Illuminate\Contracts\Support\DeferrableProvider;
-
 use Dmm\Dmm;
-use Revolution\Dmm\DmmClient;
+use Illuminate\Contracts\Support\DeferrableProvider;
+use Illuminate\Support\ServiceProvider;
 use Revolution\Dmm\Contracts\Factory;
+use Revolution\Dmm\DmmClient;
 
 class DmmServiceProvider extends ServiceProvider implements DeferrableProvider
 {

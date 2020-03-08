@@ -2,10 +2,9 @@
 
 namespace Tests;
 
-use PHPUnit\Framework\TestCase;
-
-use Revolution\Dmm\DmmClient;
 use Dmm\Dmm;
+use PHPUnit\Framework\TestCase;
+use Revolution\Dmm\DmmClient;
 
 class DmmTest extends TestCase
 {

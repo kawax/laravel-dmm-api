@@ -3,7 +3,6 @@
 namespace Revolution\Dmm\Facades;
 
 use Illuminate\Support\Facades\Facade;
-
 use Revolution\Dmm\Contracts\Factory;
 
 class Dmm extends Facade
