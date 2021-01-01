@@ -4,7 +4,7 @@ Laravel 用のシンプルなラッパー。
 https://github.com/dmmlabo/dmm-php-sdk
 
 ## Requirements
-- PHP >= 7.2
+- PHP >= 7.3
 - Laravel >= 6.0
 
 ## Installation
